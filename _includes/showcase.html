@@ -1,29 +1,53 @@
 <section class="hero is-fullheight has-text-centered" id="hero">
-  <div class="hero-body">
-
+  <div class="hero-body is-flex is-justify-content-center">
     <div class="columns">
-      <div class="column">
+      <div class="column ">
         <div class="container">
           <h1 class="title has-text-white is-size-1 is-uppercase has-text-weight-bold">
             <!-- {{site.title}} -->
-            Hello World
+            I'm Pedro Gritter,
           </h1>
           <h3 class="subtitle has-text-white-bis is-uppercase has-text-weight-medium is-marginless">
-            {{site.description}}
+            <!-- {{site.description}} -->
+            a Fullstack developer.
           </h3>
           <hr>
           <a href="{{site.url}}{{site.baseurl}}/#about"
-            class="button is-white is-rounded is-outlined is-uppercase has-text-weight-normal is-warning">Read More</a>
+            class="button is-white is-rounded is-outlined is-uppercase has-text-weight-normal is-danger">Read More</a>
           </a>
-          <a href="{{site.url}}{{site.baseurl}}/#about"
+          <a href="{{ site.url }}/download/PedroGritterCV.pdf"
             class="button is-white is-rounded is-outlined is-uppercase has-text-weight-normal is-primary">Download CV</a>
           </a>
         </div>
       </div>
-        <!-- <div class="column">
+      <div class="column is-three-fifths">
+        <div class="content has-text-left is-rounded">
+          {% highlight jsx %}
+          import react from "react";
 
+          interface WelcomeProps = {
+            uses:
+              | "explore new tech"
+              | "display my skills"
+              | "find freelancing opportunities"
+              | "find a fulltime job";
+          };
 
-            </div> -->
+          export const Welcome = ({ uses }) => {
+            return (
+              <>
+                <h1>This is my little slice of the internet.</h1>
+                <p>
+                  I use this site to <em>{uses}</em>.
+                </p>
+              </>
+            );
+          };
+
+          export default Welcome;
+          {% endhighlight %}
+        </div>
+      </div>
     </div>
 
 

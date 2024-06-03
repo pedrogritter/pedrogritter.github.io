@@ -53,6 +53,11 @@ author-url: https://github.com/pedrogritter
 restart-logo: https://restart.pt/wp-content/uploads/2021/10/logotipo-azul-positivo.png
 ul-logo: https://upload.wikimedia.org/wikipedia/commons/3/34/ULisboa_logo.svg
 
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # SASS
 sass:
