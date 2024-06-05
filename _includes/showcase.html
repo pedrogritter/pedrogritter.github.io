@@ -23,29 +23,29 @@
       <div class="column is-three-fifths">
         <div class="content has-text-left is-rounded">
           {% highlight jsx %}
-          import react from "react";
+import react from "react";
 
-          interface WelcomeProps = {
-            uses:
-              | "explore new tech"
-              | "display my skills"
-              | "find a fulltime job";
-          };
+interface WelcomeProps = {
+  uses:
+    | "explore new tech"
+    | "display my skills"
+    | "find a fulltime job";
+};
 
-          interface Skills = ['react', 'typescript', 'js', 'redux', 'python']
+interface Skills = ['react', 'typescript', 'js', 'redux', 'python']
 
-          export const Welcome = ({ uses }) => {
-            return (
-              <>
-                <h1>This is my little slice of the internet.</h1>
-                <p>
-                  I use this page to display my skills and <em>{uses}</em>.
-                </p>
-              </>
-            );
-          };
+export const Welcome = ({ uses }) => {
+  return (
+    <>
+      <h1>This is my little slice of the internet.</h1>
+      <p>
+        I use this page to display my skills and <em>{uses}</em>.
+      </p>
+    </>
+  );
+};
 
-          export default Welcome;
+export default Welcome;
           {% endhighlight %}
         </div>
       </div>
