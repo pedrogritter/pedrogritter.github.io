@@ -388,3 +388,9 @@ a.navbar-item.is-active {
     }
   }
 }
+
+.education-modal-content {
+  @media screen and (max-width: 769px) {
+    width: 95%;
+  }
+}
