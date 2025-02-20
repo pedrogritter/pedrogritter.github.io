@@ -1,43 +1,139 @@
----
-layout: compress
----
-
 <!DOCTYPE html>
-<html>
-{% include head.html %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% seo %}
+    <link href="/assets/css/main.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900">
+    {% include header.html %}
+    <div class="relative min-h-screen">
+      <!-- Global edgy background -->
+      <div class="fixed inset-0 w-full h-full">
+        <!-- Dark base with noise -->
+        <div class="absolute inset-0 bg-black"></div>
 
-<body>
-  {% include navbar.html %}
-  {% include showcase.html %}
-  {% include about.html %}
-  {% include career.html %}
-  {% include education.html %}
-  {% include contact.html %}
-  <!--Footer begins here-->
-  {% include footer.html %}
-</body>
-<script>
-  var navItems = document.getElementsByClassName('navbar-item');
-  var heroes = document.getElementsByClassName('hero');
-  const viewOffset = 200;
+        <!-- Animated cyber grid -->
+        <!-- <div class="absolute inset-0 opacity-20">
+          <div
+            class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:64px_64px] [animation:grid-move_20s_linear_infinite]"
+          ></div>
+        </div> -->
 
-  window.addEventListener("scroll", function (event) {
-    var scroll = this.scrollY;
-    var position = window.pageYOffset;
+        <!-- Gradient overlays -->
+        <div class="absolute inset-0">
+          <!-- Diagonal stripes -->
+          <!-- <div
+            class="absolute inset-0 [background-image:repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.03)_20px,rgba(255,255,255,0.03)_40px)]"
+          ></div> -->
 
-    for (var i = 0; i < navItems.length; i++) {
-      navItems[i].classList.remove('is-active');
-    }
+          <!-- Radial gradients -->
+          <div class="absolute top-0 left-0 w-full h-full">
+            <div
+              class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-[100px] animate-pulse"
+            ></div>
+            <div
+              class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"
+            ></div>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/30 rounded-full blur-[100px] animate-pulse animation-delay-4000"
+            ></div>
+          </div>
 
-    for (var i = 0; i < heroes.length; i++) {
-        var sectionTop = heroes[i].offsetTop-viewOffset;
-        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight-viewOffset;
+          <!-- Vignette effect -->
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"
+          ></div>
+        </div>
 
-        if (scroll >= sectionTop && scroll < sectionBottom) {
-          navItems[i+1].classList.add('is-active');
+        <!-- Animated particles -->
+        <div class="absolute inset-0">
+          <div class="relative w-full h-full">
+            <div
+              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float"
+              style="top: 10%; left: 45%"
+            ></div>
+            <div
+              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float animation-delay-2000"
+              style="top: 20%; left: 25%"
+            ></div>
+            <div
+              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float animation-delay-4000"
+              style="top: 80%; left: 65%"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="relative">{{ content }}</div>
+    </div>
+    {% include footer.html %}
+    <!-- include dark-mode-toggle.html  -->
+    <script src="{{ '/assets/js/cursor.js' | relative_url }}"></script>
+
+    <!-- Intersection Observer for animations -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-in");
+            }
+          });
+        });
+
+        document
+          .querySelectorAll(".animate-on-scroll")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <style>
+      @keyframes grid-move {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(64px);
+        }
       }
-    }
-  });
-</script>
 
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+        }
+        25% {
+          transform: translateY(-10px) translateX(5px);
+        }
+        50% {
+          transform: translateY(0) translateX(10px);
+        }
+        75% {
+          transform: translateY(10px) translateX(5px);
+        }
+      }
+
+      .animate-float {
+        animation: float 10s ease-in-out infinite;
+      }
+
+      .animation-delay-2000 {
+        animation-delay: 2s;
+      }
+      .animation-delay-4000 {
+        animation-delay: 4s;
+      }
+    </style>
+  </body>
 </html>

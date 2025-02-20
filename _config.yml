@@ -1,107 +1,52 @@
-# WhatATheme
-markdown: kramdown
-
-# URL of the Site
-url: ''
-# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
-baseurl:
-
-# Title of the Site
-title: Pedro Gritter
-# Description of the Site
-description: Some generated description
-# URL of Image of the Site
-site-image: /WhatATheme/assets/images/meta.jpg
-# Keywords of the Site
-site-keywords: Site, Frontend, Portfolio, Career
-# URL for the Image of custom Favicon
-favicon-url:
-
-# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-#heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
-# heroimage: https://live.staticflickr.com/65535/53577720515_e3786a60a9_3k.jpg
-heroimage: https://live.staticflickr.com/65535/53495801363_414aec25f6_k.jpg
-
-# Social Media and Contact
-# If you don't want to use any icon, you can leave them blank.
+title: Pedro Gritter - Full Stack Developer
 email: pedro12345g@gmail.com
-#facebook_username: thedevslot
-#twitter_username: thedevslot
-#instagram_username: thedevslot
-linkedin_username: pedro-gritter
-github_username:  pedrogritter
-youtube_channel_id: UCk_93NXYP-U_AOB5GfWlOow
-#reddit_username: /
-#behance_username: /
-#dribbble_username: /
-#spotify_username: /
-soundcloud_username: o-lli-n
-
-# Google Analytics
-google-analytics: UA-163806439-1
-
-# Name of the Author
-author-name: Pedro Gritter
-# URL for the Image of the Author
-author-image: https://media.licdn.com/dms/image/C4D03AQGgzBsg07PdMA/profile-displayphoto-shrink_200_200/0/1538243365698?e=1721865600&v=beta&t=iXh-2y4AIDwC-87kL2EH5yV7acf2luP7Tl909ighsOM
-# 60 Words About the Author
-author-about: A creative explorer with a diverse background and a passion for merging technology with ecology to make a positive impact on the world. With a foundation in science and a knack for visual storytelling, I thrive on the intersection of innovation and nature.
-# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
-author-url: https://github.com/pedrogritter
-
-##Content variables
-restart-logo: https://restart.pt/wp-content/uploads/2021/10/logotipo-azul-positivo.png
-ul-logo: https://upload.wikimedia.org/wikipedia/commons/3/34/ULisboa_logo.svg
-
-# Markdown
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
-# SASS
-sass:
-  sass_dir: _sass
-  style: compressed
+description: Full Stack Developer specializing in modern web technologies
+baseurl: ""
+url: "pedrogritter.github.io"
+author: Pedro Gritter
+social:
+  name: Pedro Gritter
+  links:
+    - https://github.com/pedrogritter
+    - https://linkedin.com/in/pedrogritter
 
 # Build settings
+# theme: minima
 plugins:
-  - jekyll-admin
-  - jekyll-feed
+  - jekyll-postcss-v2
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Permalink
-permalink: "blog/:title"
+postcss:
+  script: node_modules/.bin/postcss
+  cache: false
 
-# Compress
+# Performance Optimizations
+sass:
+  style: compressed
+  sourcemap: never
+
 compress_html:
   clippings: all
-
-# Defaults
-defaults:
-  -
-    scope:
-      type: 'posts'
-    values:
-      layout: post
-      post-image: ""
-      description: ""
-      tags:
-        - ""
-  -
-    scope:
-      type: 'pages'
-    values:
-      layout: page
-
-# Exclude
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  comments: all
+  endings: all
+  startings: [html, head, body]
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

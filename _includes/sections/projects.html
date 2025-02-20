@@ -1,0 +1,71 @@
+<section
+  class="py-16 bg-gray-50 dark:bg-gray-800"
+  x-data="{ activeFilter: 'all' }"
+>
+  <div class="container mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12 animate-on-scroll">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Featured Projects
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300">Some of my recent work</p>
+    </div>
+
+    <!-- Project Filters -->
+    <div class="flex justify-center space-x-4 mb-8">
+      <button
+        @click="activeFilter = 'all'"
+        :class="{ 'bg-blue-600': activeFilter === 'all' }"
+        class="px-4 py-2 rounded-lg transition-colors"
+      >
+        All
+      </button>
+      <button
+        @click="activeFilter = 'frontend'"
+        :class="{ 'bg-blue-600': activeFilter === 'frontend' }"
+        class="px-4 py-2 rounded-lg transition-colors"
+      >
+        Frontend
+      </button>
+      <button
+        @click="activeFilter = 'backend'"
+        :class="{ 'bg-blue-600': activeFilter === 'backend' }"
+        class="px-4 py-2 rounded-lg transition-colors"
+      >
+        Backend
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for project in site.data.projects %}
+      <div
+        x-show="activeFilter === 'all' || activeFilter === '{{ project.category }}'"
+        class="bg-white dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden animate-on-scroll"
+        x-transition
+      >
+        <div
+          class="aspect-w-16 aspect-h-9 bg-gradient-to-r from-blue-500 to-purple-500"
+        ></div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            {{ project.title }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            {{ project.description }}
+          </p>
+          <div class="flex flex-wrap gap-2">
+            {% for tech in project.technologies %}
+            <span
+              class="px-3 py-1 bg-gray-100 dark:bg-gray-600 rounded-full text-sm"
+            >
+              {{ tech }}
+            </span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,379 @@
+<section id="experience" class="relative py-24">
+  <div class="container relative mx-auto px-4">
+    <!-- Animated Header -->
+    <div class="text-center mb-16">
+      <h2
+        class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+      >
+        The Journey
+      </h2>
+      <p class="text-gray-400 text-xl font-light">
+        Crafted digital experiences at
+      </p>
+    </div>
+
+    <div
+      class="max-w-4xl mx-auto animate-on-scroll"
+      style="animation-delay: 0.3s"
+    >
+      <!-- Timeline Container -->
+      <div class="relative">
+        <!-- Glowing Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5">
+          <div
+            class="h-full w-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 animate-pulse"
+          ></div>
+          <div
+            class="absolute inset-0 blur-sm bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 opacity-50"
+          ></div>
+        </div>
+
+        <!-- Experience Items -->
+        <div
+          class="relative mb-20 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <!-- Animated Timeline Node -->
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+              <div class="relative w-6 h-6">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Content Card -->
+            <div
+              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
+                >
+                  Front-End Engineer
+                </h3>
+                <div class="text-blue-400 mb-2 font-medium">
+                  ESL FACEIT Group
+                </div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                >
+                  <span>London, UK</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>01/2023 – 03/2024</span>
+                </div>
+
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span>Developed and maintained social features</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Assisted in migrating the app to a modern tech
+                      stack</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Created UI components for community events and
+                      promotions</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Collaborated with marketing to enhance user
+                      acquisition</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Conducted user research & A/B testing for UI
+                      optimization</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mirror structure for left-aligned items -->
+        <div
+          class="relative mb-20 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+              <div class="relative w-6 h-6">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-sm opacity-50"
+                ></div>
+              </div>
+            </div>
+
+            <div
+              class="w-1/2 ml-auto pl-12 group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
+                >
+                  Front-End Engineer
+                </h3>
+                <div class="text-purple-400 mb-2 font-medium">
+                  ESL Gaming GmbH
+                </div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                >
+                  <span>Lisbon, PT </span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>01/2023 – 03/2024</span>
+                </div>
+
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+
+                    <span
+                      >Developed Aptoide's main platform, serving millions of
+                      users.</span
+                    >
+                    <!-- <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> -->
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span>Modernized the website from AngularJS to React</span>
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span
+                      >Worked with designers, backend, SEO, and marketing
+                      teams.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+
+                    <span
+                      >Mentored two junior developers & improved onboarding
+                      processes.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span
+                      >Conducted A/B testing to optimize engagement, surpassing
+                      €100K in ad revenue.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Element -->
+        <div
+          class="relative mb-20 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <!-- Animated Timeline Node -->
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+              <div class="relative w-6 h-6">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Content Card -->
+            <div
+              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
+                >
+                  Full-Stack Engineer
+                </h3>
+                <div class="text-blue-400 mb-2 font-medium">Aptoide</div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                >
+                  <span>Lisbon, PT</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>08/2019 – 11/2021</span>
+                </div>
+
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span>Developed and maintained social features</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Assisted in migrating the app to a modern tech
+                      stack</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Created UI components for community events and
+                      promotions</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Collaborated with marketing to enhance user
+                      acquisition</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span
+                      >Conducted user research & A/B testing for UI
+                      optimization</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add third experience similarly -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes text-gradient {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  .animate-text-gradient {
+    animation: text-gradient 8s ease infinite;
+  }
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.2);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.8);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  .animate-blob {
+    animation: blob 10s infinite;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* New animations */
+  @keyframes grid-move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(64px);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+    25% {
+      transform: translateY(-10px) translateX(5px);
+    }
+    50% {
+      transform: translateY(0) translateX(10px);
+    }
+    75% {
+      transform: translateY(10px) translateX(5px);
+    }
+  }
+
+  .animate-float {
+    animation: float 10s ease-in-out infinite;
+  }
+</style>

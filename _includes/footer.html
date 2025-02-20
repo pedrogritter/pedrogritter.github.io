@@ -1,72 +1,25 @@
-<footer id="footer">
-  <!--Footer Button-->
+<footer class="w-full px-4 py-8 bg-default-50">
   <div
-    class="container has-background-white is-flex is-justify-content-center"
-    style="justify-content: center"
-    id="backtotop"
+    class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
   >
-    <a class="has-text-white" onclick="window.scroll(0,0)">
-      <figure class="image is-64x64">
-        <img src="{{site.baseurl}}/assets/images/up-arrow.svg" />
-      </figure>
-    </a>
-  </div>
-  <div class="container has-text-centered is-rounded" id="backtotop">
-    <a class="has-text-dark" onclick="window.scroll(0,0)">BACK TO TOP</a>
-  </div>
-  <!--Footer Main Section-->
-  <!-- <div class="has-background-grey-darker">
-    <div class="container columns">
-      <div class="column has-text-left-desktop has-text-centered-mobile">
-        <a href="{{site.url}}{{site.baseurl}}/#about">
-          <div class="columns">
-            <div
-              class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet"
-            >
-              <figure class="image is-64x64">
-                <img class="is-rounded" src="{{site.author-image}}" />
-              </figure>
-            </div>
-            <div class="column is-marginless">
-              <h5 class="has-text-grey-lighter">{{site.author-name}}</h5>
-              <div class="content has-text-grey">
-                <p>{{site.author-about | truncate: 75 }}</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="column has-text-white">
-        <h3>More Links</h3>
-        {% for sitepage in site.html_pages offset: 4 %} {% unless sitepage.url
-        == '/' limit: 2 %}
-        <li>
-          <a href="{{sitepage.url | absolute_url}}">{{sitepage.title}}</a>
-        </li>
-        {% endunless %} {% endfor %}
-        <li>
-          <a target="_blank" href="{{site.url}}{{site.baseurl}}/feed.xml"
-            >Subscribe via RSS</a
-          >
-        </li>
-      </div>
-
-      <div class="column has-text-white">
-        <h3>Recent Posts</h3>
-        {% for post in site.posts offset: 0 limit:3 %}
-        <li>
-          <a href="{{post.url | absolute_url}}">{{post.title}}</a>
-        </li>
-        {% endfor %}
+    <div class="flex flex-col gap-2">
+      <h3 class="text-xl font-bold">Pedro Gritter</h3>
+      <p class="text-default-600">
+        Full Stack Developer specializing in modern web technologies
+      </p>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="text-lg font-semibold">Quick Links</h3>
+      <nav class="flex flex-col gap-2"></nav>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h3 class="text-lg font-semibold">Contact Us</h3>
+      <div class="text-default-600">
+        <p>100 Underwater Alley</p>
+        <p>Radazul, Tenerife 12345</p>
+        <p>Phone: (+34) 456-7890</p>
+        <p>Email: info@krakenfreediving.com</p>
       </div>
     </div>
-  </div> -->
-  <div
-    class="has-background-black has-text-centered has-text-white"
-    id="credits"
-  >
-    <i class="far fa-copyright"></i> {{ "now" | date: "%Y" }} | Powered by
-    <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
   </div>
 </footer>
