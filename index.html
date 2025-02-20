@@ -113,11 +113,11 @@
   <!-- Unique hero patterns -->
   <!-- <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"> -->
   <!-- Animated circuit lines -->
-  <!-- <div class="absolute inset-0 opacity-30">
-        <div
-          class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:32px_32px] [animation:grid-move_15s_linear_infinite]"
-        ></div>
-      </div> -->
+  <div class="absolute inset-0 opacity-30">
+    <div
+      class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:32px_32px] [animation:grid-move_15s_linear_infinite]"
+    ></div>
+  </div>
 
   <!-- Glowing orbs specific to hero -->
   <!-- <div class="absolute inset-0">
@@ -132,19 +132,39 @@
   </div>  -->
 
   <div class="container relative mx-auto px-4">
-    <!-- <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> -->
     <div
       class="flex flex-col justify-center items-center hero-content text-center"
     >
+      <div
+        class="relative w-48 h-48 mx-auto mb-10 mt-8 z-30 animate-float"
+        style="animation-duration: 10s"
+      >
+        <div
+          class="relative w-48 h-48 mx-auto mb-10 mt-8 animate-spin"
+          style="animation-duration: 20s"
+        >
+          <img
+            src="/assets/images/genetic-engineering.svg"
+            alt="Genes"
+            class="absolute inset-2 rounded-full object-cover w-40 h-40 animate-ping"
+            style="animation-duration: 6s; fill: aqua"
+          />
+        </div>
+      </div>
+      <!-- <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-spin-slow"></div>
+      <div class="absolute inset-1 bg-gray-900 rounded-full"></div> -->
+
+      <!-- </div> -->
+
       <!-- Text Content -->
-      <div class="space-y-8">
+      <div class="space-y-8 pt-4">
         <div class="space-y-4 justify-center">
           <h1
             class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text-gradient"
           >
             PEDRO GRITTER
           </h1>
-          <h2 class="text-3xl font-bold text-gray-200">Full Stack Engineer</h2>
+          <h2 class="text-3xl font-bold text-gray-200">Full-Stack Engineer</h2>
         </div>
 
         <!-- Description -->
@@ -158,7 +178,7 @@
 
         <!-- CTA Buttons -->
         <div
-          class="flex flex-wrap justify-center gap-4 animate-fade-in opacity-0"
+          class="flex flex-wrap justify-center items-center gap-7 animate-fade-in opacity-0"
           style="animation-delay: 0.4s"
         >
           <!-- <a
@@ -167,12 +187,9 @@
           >
             View Projects
           </a> -->
-          <!-- <a
-            href="#contact"
-            class="px-8 py-4 bg-white/10 text-white rounded-lg backdrop-blur-sm hover:bg-white/20 transform hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-white/50"
-          >
-            Get in Touch
-          </a> -->
+          <a href="https://linkedin.com/in/pedro-gritter/">
+            <img src="/assets/images/linkedin.svg" alt="Genes" class="" />
+          </a>
           <a
             href="/assets/resume.pdf"
             class="px-8 py-4 bg-white/10 text-white rounded-lg backdrop-blur-sm hover:bg-white/20 transform hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center gap-2"
@@ -192,6 +209,9 @@
               />
             </svg>
           </a>
+          <a href="https://github.com/pedrogritter">
+            <img src="/assets/images/github.svg" alt="GithubIcon" class="" />
+          </a>
         </div>
       </div>
 
@@ -204,7 +224,7 @@
   <div
     class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
   >
-    <a href="#about" class="text-white/50 hover:text-white transition-colors">
+    <a href="#skills" class="text-white/50 hover:text-white transition-colors">
       <svg
         class="w-6 h-6"
         fill="none"
@@ -534,10 +554,10 @@
                 <h3
                   class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
                 >
-                  Front-End Engineer
+                  <a href="https://www.faceit.com/">FACEIT</a>
                 </h3>
                 <div class="text-blue-400 mb-2 font-medium">
-                  ESL FACEIT Group
+                  Front-End Engineer
                 </div>
                 <div
                   class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
@@ -624,17 +644,17 @@
                 <h3
                   class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
                 >
-                  Front-End Engineer
+                  <a href="https://esl.com/">ESL Gaming</a>
                 </h3>
                 <div class="text-purple-400 mb-2 font-medium">
-                  ESL Gaming GmbH
+                  Front-End Engineer
                 </div>
                 <div
                   class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
                 >
-                  <span>Lisbon, PT </span>
+                  <span>Cologne, DE</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>01/2023 – 03/2024</span>
+                  <span>01/2022 – 01/2023</span>
                 </div>
 
                 <ul class="space-y-2 text-gray-300 text-sm">
@@ -644,8 +664,8 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
 
                     <span
-                      >Developed Aptoide's main platform, serving millions of
-                      users.</span
+                      >Part of the development cycle for the CSGO HUB
+                      platform.</span
                     >
                     <!-- <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> -->
                   </li>
@@ -653,15 +673,17 @@
                     class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
                   >
                     <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span>Modernized the website from AngularJS to React</span>
+                    <span
+                      >Improved UX and significantly optimized load times.</span
+                    >
                   </li>
                   <li
                     class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
                   >
                     <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
                     <span
-                      >Worked with designers, backend, SEO, and marketing
-                      teams.</span
+                      >Worked closely with backend teams for seamless
+                      integrations.</span
                     >
                   </li>
                   <li
@@ -670,17 +692,8 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
 
                     <span
-                      >Mentored two junior developers & improved onboarding
-                      processes.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span
-                      >Conducted A/B testing to optimize engagement, surpassing
-                      €100K in ad revenue.</span
+                      >Maintained platform stability through code
+                      optimizations.</span
                     >
                   </li>
                 </ul>
@@ -719,9 +732,11 @@
                 <h3
                   class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
                 >
-                  Full-Stack Engineer
+                  <a href="https://aptoide.com/">Aptoide</a>
                 </h3>
-                <div class="text-blue-400 mb-2 font-medium">Aptoide</div>
+                <div class="text-blue-400 mb-2 font-medium">
+                  Full-Stack Engineer
+                </div>
                 <div
                   class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
                 >
@@ -734,15 +749,24 @@
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
-                    <span>Developed and maintained social features</span>
+                    <span
+                      >Developed Aptoide's main platform, serving millions of
+                      users.</span
+                    >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span>Modernized the website from AngularJS to React.</span>
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
                     <span
-                      >Assisted in migrating the app to a modern tech
-                      stack</span
+                      >Worked with designers, backend, SEO, and marketing
+                      teams.</span
                     >
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
@@ -750,8 +774,8 @@
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
                     <span
-                      >Created UI components for community events and
-                      promotions</span
+                      >Mentored junior developers & improved onboarding
+                      processes.</span
                     >
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
@@ -759,17 +783,8 @@
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
                     <span
-                      >Collaborated with marketing to enhance user
-                      acquisition</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Conducted user research & A/B testing for UI
-                      optimization</span
+                      >Conducted A/B testing to optimize engagement, surpassing
+                      €100K in ad revenue.</span
                     >
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
