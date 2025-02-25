@@ -50,21 +50,9 @@
       <div class="fixed inset-0 w-full h-full">
         <!-- Dark base with noise -->
         <div class="absolute inset-0 bg-black"></div>
-
-        <!-- Animated cyber grid -->
-        <!-- <div class="absolute inset-0 opacity-20">
-          <div
-            class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:64px_64px] [animation:grid-move_20s_linear_infinite]"
-          ></div>
-        </div> -->
-
         <!-- Gradient overlays -->
         <div class="absolute inset-0">
           <!-- Diagonal stripes -->
-          <!-- <div
-            class="absolute inset-0 [background-image:repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.03)_20px,rgba(255,255,255,0.03)_40px)]"
-          ></div> -->
-
           <!-- Radial gradients -->
           <div class="absolute top-0 left-0 w-full h-full">
             <div
@@ -86,7 +74,6 @@
             class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"
           ></div>
         </div>
-
         <!-- Animated particles -->
         <div class="absolute inset-0">
           <div class="relative w-full h-full">
@@ -105,34 +92,16 @@
           </div>
         </div>
       </div>
-
       <!-- Main content -->
       <div class="relative"><div class="flex flex-col min-h-screen">
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center overflow-hidden">
-  <!-- Dynamic Hero Background -->
-  <!-- <div class="absolute inset-0"> -->
-  <!-- Unique hero patterns -->
-  <!-- <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-black"> -->
   <!-- Animated circuit lines -->
   <div class="absolute inset-0 opacity-30">
     <div
       class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:32px_32px] [animation:grid-move_15s_linear_infinite]"
     ></div>
   </div>
-
-  <!-- Glowing orbs specific to hero -->
-  <!-- <div class="absolute inset-0">
-        <div
-          class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px] animate-pulse"
-        ></div>
-        <div
-          class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-[120px] animate-pulse animation-delay-2000"
-        ></div>
-      </div>
-    </div>
-  </div>  -->
-
   <div class="container relative mx-auto px-4">
     <div
       class="flex flex-col justify-center items-center hero-content text-center"
@@ -153,16 +122,11 @@
           />
         </div>
       </div>
-      <!-- <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-spin-slow"></div>
-      <div class="absolute inset-1 bg-gray-900 rounded-full"></div> -->
-
-      <!-- </div> -->
-
       <!-- Text Content -->
       <div class="space-y-8 pt-4">
         <div class="space-y-4 justify-center">
           <h1
-            class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text-gradient"
+            class="text-6xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text-gradient"
           >
             PEDRO GRITTER
           </h1>
@@ -224,7 +188,7 @@
     </div>
   </div>
   <div
-    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-40"
   >
     <a href="#skills" class="text-white/50 hover:text-white transition-colors">
       <svg
@@ -257,7 +221,7 @@
     <!-- Animated Header -->
     <div class="text-center mb-20">
       <h2
-        class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 mb-6 animate-text-gradient hover:scale-105 transition-transform duration-300"
+        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 mb-6 animate-text-gradient hover:scale-105 transition-transform duration-300"
       >
         Technology
       </h2>
@@ -309,11 +273,11 @@
               </p>
               <p class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-pink-500"></span>
-                Modern CSS (Styled-Components, TailwindCSS)
+                Modern Components (Styled-Components, TailwindCSS)
               </p>
               <p class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-fuchsia-500"></span>
-                Performance Optimization
+                Performance Optimizations
               </p>
             </div>
           </div>
@@ -347,7 +311,7 @@
               >
               <span
                 class="px-4 py-2 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-teal-500/20"
-                >GraphQL</span
+                >SQL</span
               >
             </div>
 
@@ -358,7 +322,7 @@
               </p>
               <p class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                Database Optimization
+                Databases
               </p>
               <p class="flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-teal-500"></span>
@@ -422,13 +386,13 @@
     <!-- Soft Skills -->
     <div class="relative mt-20 animate-on-scroll" style="animation-delay: 0.8s">
       <h3
-        class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-10"
+        class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-12"
       >
         The Human Side
       </h3>
 
       <div
-        class="flex flex-wrap justify-center gap-4 animate-bounce"
+        class="flex flex-wrap justify-center gap-4 animate-bounce pt-4"
         style="animation-duration: 3.5s"
         x-data="{ hoveredSkill: null }"
       >
@@ -498,12 +462,12 @@
 
 
   <!-- Experience Section -->
-  <section id="experience" class="relative py-24">
+  <section id="experience" class="relative py-24 block-hide-mobile">
   <div class="container relative mx-auto px-4">
     <!-- Animated Header -->
     <div class="text-center mb-16">
       <h2
-        class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
       >
         The Journey
       </h2>
@@ -802,77 +766,277 @@
     </div>
   </div>
 </section>
+ <section id="experience" class="relative py-24 block-hide-desktop">
+  <div class="container relative mx-auto px-4">
+    <!-- Animated Header -->
+    <div class="text-center mb-16">
+      <h2
+        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+      >
+        The Journey
+      </h2>
+      <p class="text-gray-400 text-xl font-light">
+        Crafted digital experiences at
+      </p>
+    </div>
 
-<!-- <style>
-  @keyframes text-gradient {
-    0%,
-    100% {
-      background-size: 200% 200%;
-      background-position: left center;
-    }
-    50% {
-      background-size: 200% 200%;
-      background-position: right center;
-    }
-  }
-  .animate-text-gradient {
-    animation: text-gradient 8s ease infinite;
-  }
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.2);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.8);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-  }
-  .animate-blob {
-    animation: blob 10s infinite;
-  }
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
+    <div
+      class="max-w-4xl mx-auto animate-on-scroll"
+      style="animation-delay: 0.3s"
+    >
+      <!-- Timeline Container -->
+      <div class="relative">
+        <!-- Experience Items -->
 
-  /* New animations */
-  @keyframes grid-move {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(64px);
-    }
-  }
+        <div
+          class="relative mb-10 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <!-- FACEIT Card -->
+            <div
+              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
+                >
+                  <a href="https://www.faceit.com/">FACEIT</a>
+                </h3>
+                <div class="text-blue-400 mb-2 font-medium">
+                  Front-End Engineer
+                </div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
+                >
+                  <span>London, UK</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>01/2023 – 03/2024</span>
+                </div>
 
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0) translateX(0);
-    }
-    25% {
-      transform: translateY(-10px) translateX(5px);
-    }
-    50% {
-      transform: translateY(0) translateX(10px);
-    }
-    75% {
-      transform: translateY(10px) translateX(5px);
-    }
-  }
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span>Developed and maintained social features</span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Assisted in migrating the app to a modern tech
+                      stack</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Created UI components for community events and
+                      promotions</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Collaborated with marketing to enhance user
+                      acquisition</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Conducted user research & A/B testing for UI
+                      optimization</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  .animate-float {
-    animation: float 10s ease-in-out infinite;
-  }
-</style> -->
+        <!-- ESL element -->
+        <div
+          class="relative mb-10 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+              <!-- <div class="relative w-6 h-6">
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-sm opacity-50"
+                ></div>
+              </div> -->
+            </div>
 
+            <div
+              class="group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
+                >
+                  <a href="https://esl.com/">ESL Gaming</a>
+                </h3>
+                <div class="text-purple-400 mb-2 font-medium">
+                  Front-End Engineer
+                </div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
+                >
+                  <span>Cologne, DE</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>01/2022 – 01/2023</span>
+                </div>
+
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+
+                    <span
+                      >Part of the development cycle for the CSGO HUB
+                      platform.</span
+                    >
+                    <!-- <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> -->
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span
+                      >Improved UX and significantly optimized load times.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span
+                      >Worked closely with backend teams for seamless
+                      integrations.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+
+                    <span
+                      >Maintained platform stability through code
+                      optimizations.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aptoide Element -->
+        <div
+          class="relative mb-10 group"
+          x-data="{ isHovered: false }"
+          @mouseenter="isHovered = true"
+          @mouseleave="isHovered = false"
+        >
+          <div class="flex items-center">
+            <!-- Content Card -->
+            <div
+              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+            >
+              <div
+                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
+              >
+                <h3
+                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
+                >
+                  <a href="https://aptoide.com/">Aptoide</a>
+                </h3>
+                <div class="text-blue-400 mb-2 font-medium">
+                  Full-Stack Engineer
+                </div>
+                <div
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
+                >
+                  <span>Lisbon, PT</span>
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                  <span>08/2019 – 11/2021</span>
+                </div>
+
+                <ul class="space-y-2 text-gray-300 text-sm">
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Developed Aptoide's main platform, serving millions of
+                      users.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span>Modernized the website from AngularJS to React.</span>
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Worked with designers, backend, SEO, and marketing
+                      teams.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Mentored junior developers & improved onboarding
+                      processes.</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span
+                      >Conducted A/B testing to optimize engagement, surpassing
+                      €100K in ad revenue.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add third experience similarly -->
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Education Section -->
   <section class="relative py-24">
@@ -880,7 +1044,7 @@
     <!-- Header -->
     <div class="text-center mb-16">
       <h2
-        class="text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-6 animate-text-gradient"
+        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-6 animate-text-gradient"
       >
         Education
       </h2>
@@ -909,7 +1073,7 @@
       </div>
 
       <!-- Minor in Geographical Information -->
-      <div class="group animate-on-scroll" style="animation-delay: 0.8s">
+      <div class="group animate-on-scroll" style="animation-delay: 0.7s">
         <div
           class="relative p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-transparent backdrop-blur-sm border border-teal-500/10 transition-all duration-300 hover:border-teal-500/30 hover:shadow-lg hover:shadow-teal-500/10"
         >
@@ -926,7 +1090,7 @@
       </div>
 
       <!-- Audiovisual & Multimedia -->
-      <div class="group animate-on-scroll" style="animation-delay: 1.3s">
+      <div class="group animate-on-scroll" style="animation-delay: 1.2s">
         <div
           class="relative p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-transparent backdrop-blur-sm border border-cyan-500/10 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
         >
@@ -950,7 +1114,7 @@
   <section id="contact" class="py-16">
   <div
     class="container mx-auto px-4 animate-on-scroll"
-    style="animation-delay: 2s"
+    style="animation-delay: 1.5s"
   >
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12 animate-on-scroll">
@@ -991,7 +1155,7 @@
 
         <button
           type="submit"
-          class="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
+          class="w-full px-6 py-3 rounded-lg text-zinc-300 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-gradient hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
         >
           Send Message
         </button>
@@ -1000,32 +1164,45 @@
   </div>
 </section>
 
-<!-- from-blue-500 to-purple-500 -->
+<!-- class="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105" -->
 
 </div>
 </div>
     </div>
-    <footer class="w-full px-4 py-8 bg-default-50">
+    <footer class="relative w-full mt-5 px-4 py-10 bg-default-50 text-white">
   <div
-    class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-30"
   >
     <div class="flex flex-col gap-2">
-      <h3 class="text-xl font-bold">Pedro Gritter</h3>
+      <h3
+        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+      >
+        Pedro Gritter
+      </h3>
       <p class="text-default-600">
-        Full Stack Developer specializing in modern web technologies
+        Full Stack Engineer specializing in modern web technologies
       </p>
     </div>
     <div class="flex flex-col gap-2">
-      <h3 class="text-lg font-semibold">Quick Links</h3>
-      <nav class="flex flex-col gap-2"></nav>
+      <h3
+        class="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+      >
+        Quick Links
+      </h3>
+      <nav class="flex flex-col gap-2">
+        <a href="https://github.com/pedrogritter"><b>Github</b></a>
+        <a href="https://www.linkedin.com/in/pedro-gritter/"><b>Linkedin</b></a>
+      </nav>
     </div>
     <div class="flex flex-col gap-2">
-      <h3 class="text-lg font-semibold">Contact Us</h3>
-      <div class="text-default-600">
-        <p>100 Underwater Alley</p>
-        <p>Radazul, Tenerife 12345</p>
-        <p>Phone: (+34) 456-7890</p>
-        <p>Email: info@krakenfreediving.com</p>
+      <h3
+        class="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+      >
+        Contact
+      </h3>
+      <div class="text-slate-50">
+        <p>Phone: (+351) 918460457</p>
+        <p>Email: pedro12345g@gmail.com</p>
       </div>
     </div>
   </div>
@@ -1050,43 +1227,5 @@
           .forEach((el) => observer.observe(el));
       });
     </script>
-
-    <!-- <style>
-      @keyframes grid-move {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(64px);
-        }
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0) translateX(0);
-        }
-        25% {
-          transform: translateY(-10px) translateX(5px);
-        }
-        50% {
-          transform: translateY(0) translateX(10px);
-        }
-        75% {
-          transform: translateY(10px) translateX(5px);
-        }
-      }
-
-      .animate-float {
-        animation: float 10s ease-in-out infinite;
-      }
-
-      .animation-delay-2000 {
-        animation-delay: 2s;
-      }
-      .animation-delay-4000 {
-        animation-delay: 4s;
-      }
-    </style> -->
   </body>
 </html>
