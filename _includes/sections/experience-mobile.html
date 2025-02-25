@@ -1,4 +1,4 @@
-<section id="experience" class="relative py-24 block-hide-mobile">
+<section id="experience" class="relative py-24 block-hide-desktop">
   <div class="container relative mx-auto px-4">
     <!-- Animated Header -->
     <div class="text-center mb-16">
@@ -18,39 +18,18 @@
     >
       <!-- Timeline Container -->
       <div class="relative">
-        <!-- Glowing Timeline Line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5">
-          <div
-            class="h-full w-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 animate-pulse"
-          ></div>
-          <div
-            class="absolute inset-0 blur-sm bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 opacity-50"
-          ></div>
-        </div>
-
         <!-- Experience Items -->
+
         <div
-          class="relative mb-20 group"
+          class="relative mb-10 group"
           x-data="{ isHovered: false }"
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false"
         >
           <div class="flex items-center">
-            <!-- Animated Timeline Node -->
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div>
-            </div>
-
-            <!-- Content Card -->
+            <!-- FACEIT Card -->
             <div
-              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
             >
               <div
                 class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
@@ -64,7 +43,7 @@
                   Front-End Engineer
                 </div>
                 <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
                 >
                   <span>London, UK</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
@@ -75,44 +54,44 @@
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
-                    <span>Developed and maintained social features</span>
                     <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span>Developed and maintained social features</span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Assisted in migrating the app to a modern tech
                       stack</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Created UI components for community events and
                       promotions</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Collaborated with marketing to enhance user
                       acquisition</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Conducted user research & A/B testing for UI
                       optimization</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                 </ul>
               </div>
@@ -120,27 +99,27 @@
           </div>
         </div>
 
-        <!-- Mirror structure for left-aligned items -->
+        <!-- ESL element -->
         <div
-          class="relative mb-20 group"
+          class="relative mb-10 group"
           x-data="{ isHovered: false }"
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false"
         >
           <div class="flex items-center">
             <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
+              <!-- <div class="relative w-6 h-6">
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"
                 ></div>
                 <div
                   class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-sm opacity-50"
                 ></div>
-              </div>
+              </div> -->
             </div>
 
             <div
-              class="w-1/2 ml-auto pl-12 group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
+              class="group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
             >
               <div
                 class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
@@ -154,7 +133,7 @@
                   Front-End Engineer
                 </div>
                 <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
                 >
                   <span>Cologne, DE</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
@@ -206,29 +185,17 @@
           </div>
         </div>
 
-        <!-- Third Element -->
+        <!-- Aptoide Element -->
         <div
-          class="relative mb-20 group"
+          class="relative mb-10 group"
           x-data="{ isHovered: false }"
           @mouseenter="isHovered = true"
           @mouseleave="isHovered = false"
         >
           <div class="flex items-center">
-            <!-- Animated Timeline Node -->
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div>
-            </div>
-
             <!-- Content Card -->
             <div
-              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
+              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
             >
               <div
                 class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
@@ -242,7 +209,7 @@
                   Full-Stack Engineer
                 </div>
                 <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
+                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
                 >
                   <span>Lisbon, PT</span>
                   <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
@@ -253,44 +220,44 @@
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Developed Aptoide's main platform, serving millions of
                       users.</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span>Modernized the website from AngularJS to React.</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Worked with designers, backend, SEO, and marketing
                       teams.</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Mentored junior developers & improved onboarding
                       processes.</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                   <li
                     class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
                   >
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                     <span
                       >Conducted A/B testing to optimize engagement, surpassing
                       €100K in ad revenue.</span
                     >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                   </li>
                 </ul>
               </div>

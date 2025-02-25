@@ -20,21 +20,9 @@
       <div class="fixed inset-0 w-full h-full">
         <!-- Dark base with noise -->
         <div class="absolute inset-0 bg-black"></div>
-
-        <!-- Animated cyber grid -->
-        <!-- <div class="absolute inset-0 opacity-20">
-          <div
-            class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:64px_64px] [animation:grid-move_20s_linear_infinite]"
-          ></div>
-        </div> -->
-
         <!-- Gradient overlays -->
         <div class="absolute inset-0">
           <!-- Diagonal stripes -->
-          <!-- <div
-            class="absolute inset-0 [background-image:repeating-linear-gradient(45deg,transparent,transparent_20px,rgba(255,255,255,0.03)_20px,rgba(255,255,255,0.03)_40px)]"
-          ></div> -->
-
           <!-- Radial gradients -->
           <div class="absolute top-0 left-0 w-full h-full">
             <div
@@ -56,7 +44,6 @@
             class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"
           ></div>
         </div>
-
         <!-- Animated particles -->
         <div class="absolute inset-0">
           <div class="relative w-full h-full">
@@ -75,7 +62,6 @@
           </div>
         </div>
       </div>
-
       <!-- Main content -->
       <div class="relative">{{ content }}</div>
     </div>
@@ -99,43 +85,5 @@
           .forEach((el) => observer.observe(el));
       });
     </script>
-
-    <!-- <style>
-      @keyframes grid-move {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(64px);
-        }
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0) translateX(0);
-        }
-        25% {
-          transform: translateY(-10px) translateX(5px);
-        }
-        50% {
-          transform: translateY(0) translateX(10px);
-        }
-        75% {
-          transform: translateY(10px) translateX(5px);
-        }
-      }
-
-      .animate-float {
-        animation: float 10s ease-in-out infinite;
-      }
-
-      .animation-delay-2000 {
-        animation-delay: 2s;
-      }
-      .animation-delay-4000 {
-        animation-delay: 4s;
-      }
-    </style> -->
   </body>
 </html>
