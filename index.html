@@ -1,1231 +1,614 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedro Gritter - Full Stack Developer</title>
+    <title>Pedro Gritter</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Pedro Gritter - Full Stack Developer | Full Stack Developer specializing in modern web technologies</title>
+<title>Pedro Gritter | Front-end engineer building for the web since 2019. React, Next.js, TypeScript. Currently bridging frontend expertise with applied AI engineering.</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Pedro Gritter - Full Stack Developer" />
+<meta property="og:title" content="Pedro Gritter" />
 <meta name="author" content="Pedro Gritter" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Full Stack Developer specializing in modern web technologies" />
-<meta property="og:description" content="Full Stack Developer specializing in modern web technologies" />
+<meta name="description" content="Front-end engineer building for the web since 2019. React, Next.js, TypeScript. Currently bridging frontend expertise with applied AI engineering." />
+<meta property="og:description" content="Front-end engineer building for the web since 2019. React, Next.js, TypeScript. Currently bridging frontend expertise with applied AI engineering." />
 <link rel="canonical" href="https://pedrogritter.github.io/" />
 <meta property="og:url" content="https://pedrogritter.github.io/" />
-<meta property="og:site_name" content="Pedro Gritter - Full Stack Developer" />
+<meta property="og:site_name" content="Pedro Gritter" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Pedro Gritter - Full Stack Developer" />
+<meta property="twitter:title" content="Pedro Gritter" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Pedro Gritter"},"description":"Full Stack Developer specializing in modern web technologies","headline":"Pedro Gritter - Full Stack Developer","name":"Pedro Gritter","sameAs":["https://github.com/pedrogritter","https://linkedin.com/in/pedrogritter"],"url":"https://pedrogritter.github.io/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Pedro Gritter"},"description":"Front-end engineer building for the web since 2019. React, Next.js, TypeScript. Currently bridging frontend expertise with applied AI engineering.","headline":"Pedro Gritter","name":"Pedro Gritter","sameAs":["https://github.com/pedrogritter","https://linkedin.com/in/pedro-gritter/"],"url":"https://pedrogritter.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link href="/assets/css/main.css" rel="stylesheet" />
     <link href="/assets/css/animations.css" rel="stylesheet" />
-
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
   </head>
-  <body class="bg-gray-50 dark:bg-gray-900">
-    <header class="fixed w-full top-0 z-50 dark:bg-gray-900/80 backdrop-blur-sm">
-  <nav class="container mx-auto px-4 py-8">
-    <div class="flex justify-between items-center">
-      <!-- <a href="#" class="text-2xl font-bold text-gray-800"></a> -->
-      <div class="hidden md:flex space-x-8 text-violet-900">
-        <a href="#" class="nav-link">Start</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#contact" class="nav-link">Contact</a>
+  <body class="bg-surface text-text-primary font-sans antialiased">
+    <!-- Marble ink background: SVG turbulence distorts gradient stripes into organic veins -->
+    <div id="ambient-bg" class="ambient-bg" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="0"
+        height="0"
+        aria-hidden="true"
+      >
+        <filter
+          id="marble-warp"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          color-interpolation-filters="sRGB"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.006 0.008"
+            numOctaves="3"
+            seed="5"
+            stitchTiles="stitch"
+            result="noise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="260"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
+      <div class="marble-layer" style="filter: url(#marble-warp)">
+        <div class="marble-ink marble-ink-1"></div>
+        <div class="marble-ink marble-ink-2"></div>
+        <div class="marble-ink marble-ink-3"></div>
       </div>
+    </div>
+    <!-- Frosted glass overlay -->
+    <div class="glass-overlay" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-sm border-b border-surface-border/50 relative" style="z-index: 50;">
+  <div class="scroll-progress"></div>
+  <nav class="max-w-3xl mx-auto px-6 md:px-8 h-14 flex items-center justify-between">
+    <a href="/" class="text-sm font-medium text-text-primary no-underline hover:no-underline" style="text-decoration: none;">
+      Pedro Gritter
+    </a>
+
+    <div class="flex items-center gap-6 text-sm">
+      <a href="#experience" class="nav-link no-underline" style="text-decoration: none;">Experience</a>
+      <a href="#projects" class="nav-link no-underline" style="text-decoration: none;">Projects</a>
+      <a href="#contact" class="nav-link no-underline" style="text-decoration: none;">Contact</a>
     </div>
   </nav>
 </header>
 
-    <div class="relative min-h-screen">
-      <!-- Global edgy background -->
-      <div class="fixed inset-0 w-full h-full">
-        <!-- Dark base with noise -->
-        <div class="absolute inset-0 bg-black"></div>
-        <!-- Gradient overlays -->
-        <div class="absolute inset-0">
-          <!-- Diagonal stripes -->
-          <!-- Radial gradients -->
-          <div class="absolute top-0 left-0 w-full h-full">
-            <div
-              class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-[100px] animate-pulse"
-            ></div>
-            <div
-              class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/30 rounded-full blur-[100px] animate-pulse animation-delay-2000"
-            ></div>
-            <div
-              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-500/30 rounded-full blur-[100px] animate-pulse animation-delay-4000"
-            ></div>
-          </div>
 
-          <!-- Vignette effect -->
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black"
-          ></div>
-          <div
-            class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"
-          ></div>
-        </div>
-        <!-- Animated particles -->
-        <div class="absolute inset-0">
-          <div class="relative w-full h-full">
-            <div
-              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float"
-              style="top: 10%; left: 45%"
-            ></div>
-            <div
-              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float animation-delay-2000"
-              style="top: 20%; left: 25%"
-            ></div>
-            <div
-              class="absolute w-2 h-2 bg-white rounded-full opacity-20 animate-float animation-delay-4000"
-              style="top: 80%; left: 65%"
-            ></div>
-          </div>
-        </div>
-      </div>
-      <!-- Main content -->
-      <div class="relative"><div class="flex flex-col min-h-screen">
-  <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center overflow-hidden">
-  <!-- Animated circuit lines -->
-  <div class="absolute inset-0 opacity-30">
-    <div
-      class="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:32px_32px] [animation:grid-move_15s_linear_infinite]"
-    ></div>
-  </div>
-  <div class="container relative mx-auto px-4">
-    <div
-      class="flex flex-col justify-center items-center hero-content text-center"
-    >
-      <div
-        class="relative w-48 h-48 mx-auto mb-10 mt-8 z-30 animate-float"
-        style="animation-duration: 10s"
-      >
-        <div
-          class="relative w-48 h-48 mx-auto mb-10 mt-8 animate-spin"
-          style="animation-duration: 20s"
-        >
-          <img
-            src="/assets/images/genetic-engineering.svg"
-            alt="Genes"
-            class="absolute inset-2 rounded-full object-cover w-40 h-40 animate-ping"
-            style="animation-duration: 6s; fill: aqua"
-          />
-        </div>
-      </div>
-      <!-- Text Content -->
-      <div class="space-y-8 pt-4">
-        <div class="space-y-4 justify-center">
-          <h1
-            class="text-6xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-text-gradient"
-          >
-            PEDRO GRITTER
-          </h1>
-          <h2 class="text-3xl font-bold text-gray-200">Full-Stack Engineer</h2>
-        </div>
-
-        <!-- Description -->
-        <p
-          class="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in opacity-0"
-          style="animation-delay: 0.4s"
-        >
-          Crafting modern web applications focusing on performance,
-          accessibility, and exceptional user experience.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div
-          class="flex flex-wrap justify-center items-center gap-7 animate-fade-in opacity-0"
-          style="animation-delay: 0.4s"
-        >
-          <!-- <a
-            href="#projects"
-            class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transform hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-          >
-            View Projects
-          </a> -->
-          <a href="https://linkedin.com/in/pedro-gritter/">
-            <img src="/assets/images/linkedin.svg" alt="Genes" class="" />
-          </a>
-          <a
-            href="/assets/resume.pdf"
-            class="px-8 py-4 bg-white/10 text-white rounded-lg backdrop-blur-sm hover:bg-white/20 transform hover:scale-105 transition-all focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center gap-2"
-          >
-            <span>Download CV</span>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-          </a>
-          <a href="https://github.com/pedrogritter">
-            <img src="/assets/images/github.svg" alt="GithubIcon" class="" />
-          </a>
-        </div>
-      </div>
-
-      <!-- Visual Element (optional) -->
-      <div class="hidden lg:block">
-        <!-- Add a visual element here if desired -->
-      </div>
-    </div>
-  </div>
+    <main class="max-w-3xl mx-auto px-6 md:px-8 relative z-10">
+      <section
+  id="hero"
+  class="hero-section min-h-screen flex items-center justify-center relative"
+>
   <div
-    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-40"
+    class="hero-content space-y-6 stagger max-w-3xl mx-auto px-6 md:px-8 w-full"
   >
-    <a href="#skills" class="text-white/50 hover:text-white transition-colors">
-      <svg
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
+    <h1
+      class="text-text-primary hero-glow reveal uppercase tracking-widest text-4xl md:text-5xl lg:text-6xl"
+    >
+      Pedro Gritter
+    </h1>
+
+    <p class="text-text-secondary text-lg leading-relaxed max-w-xl reveal">
+      Front-end engineer with 7 years of experience building for the web. React,
+      Next.js, TypeScript — from legacy migrations serving millions of users to
+      enterprise e-commerce. Currently bridging frontend work with applied AI
+      engineering.
+    </p>
+
+    <div class="flex items-center gap-5 reveal">
+      <a
+        href="https://github.com/pedrogritter"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hero-icon"
+        aria-label="GitHub"
       >
-        <path
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://linkedin.com/in/pedro-gritter/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hero-icon"
+        aria-label="LinkedIn"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+          />
+        </svg>
+      </a>
+      <a
+        href="mailto:pedro12345g@gmail.com"
+        class="hero-icon"
+        aria-label="Email"
+      >
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
           stroke-linecap="round"
           stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 14l-7 7m0 0l-7-7m7 7V3"
-        />
-      </svg>
-    </a>
-  </div>
-  <div class="gradient-bottom"></div>
-</section>
-
-
-  <!-- About Section -->
-
-  <!-- Projects Section -->
-  <!-- include sections/projects.html  -->
-
-  <!-- Skills Section -->
-  <section id="skills" class="relative py-24">
-  <div class="container relative mx-auto px-4">
-    <!-- Animated Header -->
-    <div class="text-center mb-20">
-      <h2
-        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 mb-6 animate-text-gradient hover:scale-105 transition-transform duration-300"
+        >
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+      </a>
+      <a
+        href="/assets/Pedro_Gritter_CV.pdf"
+        download
+        class="hero-icon hero-icon--label no-underline"
+        aria-label="DOWNLOAD CV"
       >
-        Technology
-      </h2>
-      <p class="text-gray-400 text-xl font-light">
-        Where code meets creativity
-      </p>
+        <span class="text-xs no-underline">DOWNLOAD CV</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+      </a>
     </div>
+  </div>
 
-    <!-- Main Skills Grid -->
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 animate-on-scroll"
-      style="animation-delay: 0.3s"
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-hint">
+    <svg
+      width="20"
+      height="30"
+      viewBox="0 0 20 30"
+      fill="none"
+      class="text-text-muted"
     >
-      <!-- Frontend Expertise -->
-      <div class="group">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
-        >
-          <div
-            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          ></div>
-
-          <h3
-            class="justify-self-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-8"
-          >
-            Frontend
-          </h3>
-
-          <div class="space-y-4">
-            <div class="flex flex-wrap gap-3">
-              <span
-                class="px-4 py-2 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-purple-500/20"
-                >Next.js</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-pink-500/10 text-pink-300 border border-pink-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-pink-500/20"
-                >TypeScript</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-fuchsia-500/20"
-                >React</span
-              >
-            </div>
-
-            <div class="mt-6 space-y-2 text-sm text-gray-400">
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-purple-500"></span>
-                State Management (Redux, Context)
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-pink-500"></span>
-                Modern Components (Styled-Components, TailwindCSS)
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-fuchsia-500"></span>
-                Performance Optimizations
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Backend Expertise -->
-      <div class="group">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-transparent backdrop-blur-sm border border-cyan-500/10 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
-        >
-          <div
-            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          ></div>
-
-          <h3
-            class="justify-self-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-8"
-          >
-            Backend
-          </h3>
-
-          <div class="space-y-4">
-            <div class="flex flex-wrap gap-3">
-              <span
-                class="px-4 py-2 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-cyan-500/20"
-                >Node.js</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-blue-500/20"
-                >Python</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-teal-500/20"
-                >SQL</span
-              >
-            </div>
-
-            <div class="mt-6 space-y-2 text-sm text-gray-400">
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
-                API Architecture & Design
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-                Databases
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-                Microservices
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DevOps & Tools -->
-      <div class="group">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-transparent backdrop-blur-sm border border-emerald-500/10 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/10"
-        >
-          <div
-            class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          ></div>
-
-          <h3
-            class="justify-self-center text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400 mb-8"
-          >
-            DevOps & Tools
-          </h3>
-
-          <div class="space-y-4">
-            <div class="flex flex-wrap gap-3">
-              <span
-                class="px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-emerald-500/20"
-                >Docker</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-green-500/10 text-green-300 border border-green-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-green-500/20"
-                >Git</span
-              >
-              <span
-                class="px-4 py-2 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/20 transform transition-all duration-300 hover:scale-105 hover:bg-teal-500/20"
-                >CI/CD</span
-              >
-            </div>
-
-            <div class="mt-6 space-y-2 text-sm text-gray-400">
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Cloud Infrastructure
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                Testing & Automation
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-                Performance Monitoring
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Soft Skills -->
-    <div class="relative mt-20 animate-on-scroll" style="animation-delay: 0.8s">
-      <h3
-        class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-12"
-      >
-        The Human Side
-      </h3>
-
-      <div
-        class="flex flex-wrap justify-center gap-4 animate-bounce pt-4"
-        style="animation-duration: 3.5s"
-        x-data="{ hoveredSkill: null }"
-      >
-        <template
-          x-for="(skill, index) in ['Problem Solver', 'Team Player', 'Creative Mind', 'Quick Learner', 'Effective Communicator']"
-        >
-          <div
-            class="group relative cursor-pointer"
-            @mouseenter="hoveredSkill = skill"
-            @mouseleave="hoveredSkill = null"
-          >
-            <div
-              class="absolute -inset-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 opacity-20 group-hover:opacity-100 blur transition-all duration-300"
-            ></div>
-            <span
-              class="relative block px-6 py-3 rounded-full bg-gray-900/50 text-gray-300 border border-indigo-500/30 transform transition-all duration-300 group-hover:scale-110 group-hover:text-white"
-            >
-              <span x-text="skill"></span>
-            </span>
-          </div>
-        </template>
-      </div>
-    </div>
-  </div>
-  <div class="gradient-top"></div>
-</section>
-
-<style>
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.2);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.8);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-  }
-  .animate-blob {
-    animation: blob 10s infinite;
-  }
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-  @keyframes text-gradient {
-    0%,
-    100% {
-      background-size: 200% 200%;
-      background-position: left center;
-    }
-    50% {
-      background-size: 200% 200%;
-      background-position: right center;
-    }
-  }
-  .animate-text-gradient {
-    animation: text-gradient 8s ease infinite;
-  }
-</style>
-
-
-  <!-- Experience Section -->
-  <section id="experience" class="relative py-24 block-hide-mobile">
-  <div class="container relative mx-auto px-4">
-    <!-- Animated Header -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
-      >
-        The Journey
-      </h2>
-      <p class="text-gray-400 text-xl font-light">
-        Crafted digital experiences at
-      </p>
-    </div>
-
-    <div
-      class="max-w-4xl mx-auto animate-on-scroll"
-      style="animation-delay: 0.3s"
-    >
-      <!-- Timeline Container -->
-      <div class="relative">
-        <!-- Glowing Timeline Line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5">
-          <div
-            class="h-full w-full bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 animate-pulse"
-          ></div>
-          <div
-            class="absolute inset-0 blur-sm bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 opacity-50"
-          ></div>
-        </div>
-
-        <!-- Experience Items -->
-        <div
-          class="relative mb-20 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <!-- Animated Timeline Node -->
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div>
-            </div>
-
-            <!-- Content Card -->
-            <div
-              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
-                >
-                  <a href="https://www.faceit.com/">FACEIT</a>
-                </h3>
-                <div class="text-blue-400 mb-2 font-medium">
-                  Front-End Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
-                >
-                  <span>London, UK</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>01/2023 – 03/2024</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span>Developed and maintained social features</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Assisted in migrating the app to a modern tech
-                      stack</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Created UI components for community events and
-                      promotions</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Collaborated with marketing to enhance user
-                      acquisition</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Conducted user research & A/B testing for UI
-                      optimization</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mirror structure for left-aligned items -->
-        <div
-          class="relative mb-20 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div>
-            </div>
-
-            <div
-              class="w-1/2 ml-auto pl-12 group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
-                >
-                  <a href="https://esl.com/">ESL Gaming</a>
-                </h3>
-                <div class="text-purple-400 mb-2 font-medium">
-                  Front-End Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
-                >
-                  <span>Cologne, DE</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>01/2022 – 01/2023</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-
-                    <span
-                      >Part of the development cycle for the CSGO HUB
-                      platform.</span
-                    >
-                    <!-- <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> -->
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span
-                      >Improved UX and significantly optimized load times.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span
-                      >Worked closely with backend teams for seamless
-                      integrations.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-
-                    <span
-                      >Maintained platform stability through code
-                      optimizations.</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Third Element -->
-        <div
-          class="relative mb-20 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <!-- Animated Timeline Node -->
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div>
-            </div>
-
-            <!-- Content Card -->
-            <div
-              class="w-1/2 pr-12 text-right group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
-                >
-                  <a href="https://aptoide.com/">Aptoide</a>
-                </h3>
-                <div class="text-blue-400 mb-2 font-medium">
-                  Full-Stack Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-end gap-2"
-                >
-                  <span>Lisbon, PT</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>08/2019 – 11/2021</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Developed Aptoide's main platform, serving millions of
-                      users.</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span>Modernized the website from AngularJS to React.</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Worked with designers, backend, SEO, and marketing
-                      teams.</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Mentored junior developers & improved onboarding
-                      processes.</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span
-                      >Conducted A/B testing to optimize engagement, surpassing
-                      €100K in ad revenue.</span
-                    >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Add third experience similarly -->
-      </div>
-    </div>
-  </div>
-</section>
- <section id="experience" class="relative py-24 block-hide-desktop">
-  <div class="container relative mx-auto px-4">
-    <!-- Animated Header -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
-      >
-        The Journey
-      </h2>
-      <p class="text-gray-400 text-xl font-light">
-        Crafted digital experiences at
-      </p>
-    </div>
-
-    <div
-      class="max-w-4xl mx-auto animate-on-scroll"
-      style="animation-delay: 0.3s"
-    >
-      <!-- Timeline Container -->
-      <div class="relative">
-        <!-- Experience Items -->
-
-        <div
-          class="relative mb-10 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <!-- FACEIT Card -->
-            <div
-              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
-                >
-                  <a href="https://www.faceit.com/">FACEIT</a>
-                </h3>
-                <div class="text-blue-400 mb-2 font-medium">
-                  Front-End Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
-                >
-                  <span>London, UK</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>01/2023 – 03/2024</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span>Developed and maintained social features</span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Assisted in migrating the app to a modern tech
-                      stack</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Created UI components for community events and
-                      promotions</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Collaborated with marketing to enhance user
-                      acquisition</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Conducted user research & A/B testing for UI
-                      optimization</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ESL element -->
-        <div
-          class="relative mb-10 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <div class="absolute left-1/2 transform -translate-x-1/2">
-              <!-- <div class="relative w-6 h-6">
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"
-                ></div>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-sm opacity-50"
-                ></div>
-              </div> -->
-            </div>
-
-            <div
-              class="group-hover:transform group-hover:translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-purple-900/20 to-transparent backdrop-blur-sm border border-purple-500/10 transition-all duration-300 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2"
-                >
-                  <a href="https://esl.com/">ESL Gaming</a>
-                </h3>
-                <div class="text-purple-400 mb-2 font-medium">
-                  Front-End Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
-                >
-                  <span>Cologne, DE</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>01/2022 – 01/2023</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-
-                    <span
-                      >Part of the development cycle for the CSGO HUB
-                      platform.</span
-                    >
-                    <!-- <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> -->
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span
-                      >Improved UX and significantly optimized load times.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-                    <span
-                      >Worked closely with backend teams for seamless
-                      integrations.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-start gap-2 transition-all duration-300 hover:text-purple-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
-
-                    <span
-                      >Maintained platform stability through code
-                      optimizations.</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Aptoide Element -->
-        <div
-          class="relative mb-10 group"
-          x-data="{ isHovered: false }"
-          @mouseenter="isHovered = true"
-          @mouseleave="isHovered = false"
-        >
-          <div class="flex items-center">
-            <!-- Content Card -->
-            <div
-              class="text-left group-hover:transform group-hover:-translate-x-2 transition-transform duration-300"
-            >
-              <div
-                class="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-transparent backdrop-blur-sm border border-blue-500/10 transition-all duration-300 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10"
-              >
-                <h3
-                  class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2"
-                >
-                  <a href="https://aptoide.com/">Aptoide</a>
-                </h3>
-                <div class="text-blue-400 mb-2 font-medium">
-                  Full-Stack Engineer
-                </div>
-                <div
-                  class="text-gray-400 text-sm mb-4 flex items-center justify-start gap-2"
-                >
-                  <span>Lisbon, PT</span>
-                  <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-                  <span>08/2019 – 11/2021</span>
-                </div>
-
-                <ul class="space-y-2 text-gray-300 text-sm">
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Developed Aptoide's main platform, serving millions of
-                      users.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span>Modernized the website from AngularJS to React.</span>
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Worked with designers, backend, SEO, and marketing
-                      teams.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Mentored junior developers & improved onboarding
-                      processes.</span
-                    >
-                  </li>
-                  <li
-                    class="flex items-center justify-end gap-2 transition-all duration-300 hover:text-blue-300"
-                  >
-                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                    <span
-                      >Conducted A/B testing to optimize engagement, surpassing
-                      €100K in ad revenue.</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Add third experience similarly -->
-      </div>
-    </div>
+      <rect
+        x="1"
+        y="1"
+        width="18"
+        height="28"
+        rx="9"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+      <circle class="scroll-dot" cx="10" cy="8" r="2" fill="currentColor" />
+    </svg>
   </div>
 </section>
 
-  <!-- Education Section -->
-  <section class="relative py-24">
-  <div class="container relative mx-auto px-4">
-    <!-- Header -->
-    <div class="text-center mb-16">
-      <h2
-        class="text-5xl md:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 mb-6 animate-text-gradient"
-      >
-        Education
-      </h2>
-      <p class="text-gray-400 text-xl font-light">
-        Academic journey & learning
-      </p>
+<section id="experience" class="section">
+  <h2 class="section-heading reveal">Experience</h2>
+
+  <div class="space-y-8 stagger">
+    
+    <div class="reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3 class="text-text-primary">
+          Senior Front End Engineer
+          <span class="text-text-muted font-normal">—</span>
+          
+          <span>CGI (Rossmann)</span>
+          
+        </h3>
+        <span class="text-sm text-text-muted whitespace-nowrap">Aug 2025 – Present</span>
+      </div>
+
+      <p class="text-xs text-text-muted mb-3">Remote / Germany</p>
+
+      <ul class="space-y-1.5 text-sm text-text-secondary">
+        
+        <li class="leading-relaxed">Converting legacy HYBRIS storefront to Next.js + AEM for one of Germany's largest retailers</li>
+        
+        <li class="leading-relaxed">Developing AEM-driven UI components, running technical investigations</li>
+        
+        <li class="leading-relaxed">Multi-stage deployment (DEV/STAGE/PROD) in enterprise environment</li>
+        
+      </ul>
     </div>
-
-    <!-- Education Cards -->
-    <div class="max-w-4xl mx-auto grid gap-8">
-      <!-- BSc Computer Science -->
-      <div class="group animate-on-scroll" style="animation-delay: 0.3s">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-emerald-900/20 to-transparent backdrop-blur-sm border border-emerald-500/10 transition-all duration-300 hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/10"
-        >
-          <h3
-            class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-2"
-          >
-            BSc Computer Science
-          </h3>
-          <div class="text-emerald-400 mb-2 font-medium">
-            University of Lisbon – Faculty of Sciences
-          </div>
-          <div class="text-gray-400 text-sm">09/2014 – 01/2021</div>
-        </div>
+    
+    <div class="reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3 class="text-text-primary">
+          Front End Engineer
+          <span class="text-text-muted font-normal">—</span>
+          
+          <a href="https://www.faceit.com/" target="_blank" rel="noopener noreferrer" class="text-text-primary">
+            ESL FACEIT Group
+          </a>
+          
+        </h3>
+        <span class="text-sm text-text-muted whitespace-nowrap">Jan 2023 – Mar 2024</span>
       </div>
 
-      <!-- Minor in Geographical Information -->
-      <div class="group animate-on-scroll" style="animation-delay: 0.7s">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-teal-900/20 to-transparent backdrop-blur-sm border border-teal-500/10 transition-all duration-300 hover:border-teal-500/30 hover:shadow-lg hover:shadow-teal-500/10"
-        >
-          <h3
-            class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400 mb-2"
-          >
-            Minor in Geographical Information
-          </h3>
-          <div class="text-teal-400 mb-2 font-medium">
-            University of Lisbon – Faculty of Sciences
-          </div>
-          <div class="text-gray-400 text-sm">09/2019 – 06/2020</div>
-        </div>
+      <p class="text-xs text-text-muted mb-3">London, UK</p>
+
+      <ul class="space-y-1.5 text-sm text-text-secondary">
+        
+        <li class="leading-relaxed">Led landing page revamp — still live, serves millions of monthly users</li>
+        
+        <li class="leading-relaxed">Built social features: player profiles, content sharing, friend connections</li>
+        
+        <li class="leading-relaxed">Migrated monolith to hybrid architecture with feature flags and A/B testing</li>
+        
+        <li class="leading-relaxed">Documented component library via Storybook</li>
+        
+      </ul>
+    </div>
+    
+    <div class="reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3 class="text-text-primary">
+          Front End Engineer
+          <span class="text-text-muted font-normal">—</span>
+          
+          <a href="https://esl.com/" target="_blank" rel="noopener noreferrer" class="text-text-primary">
+            ESL Gaming
+          </a>
+          
+        </h3>
+        <span class="text-sm text-text-muted whitespace-nowrap">Jan 2022 – Jan 2023</span>
       </div>
 
-      <!-- Audiovisual & Multimedia -->
-      <div class="group animate-on-scroll" style="animation-delay: 1.2s">
-        <div
-          class="relative p-6 rounded-2xl bg-gradient-to-br from-cyan-900/20 to-transparent backdrop-blur-sm border border-cyan-500/10 transition-all duration-300 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/10"
-        >
-          <h3
-            class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-2"
-          >
-            Audiovisual & Multimedia
-          </h3>
-          <div class="text-cyan-400 mb-2 font-medium">
-            Restart Creative School
-          </div>
-          <div class="text-gray-400 text-sm">01/2013 – 05/2014</div>
-        </div>
+      <p class="text-xs text-text-muted mb-3">Cologne, Germany</p>
+
+      <ul class="space-y-1.5 text-sm text-text-secondary">
+        
+        <li class="leading-relaxed">Full development cycle of CSGO HUB companion platform</li>
+        
+        <li class="leading-relaxed">Modernized frontend, reduced load times, improved engagement via A/B testing</li>
+        
+        <li class="leading-relaxed">Wrote API adaptors for backend integration, tight FE↔BE collaboration</li>
+        
+      </ul>
+    </div>
+    
+    <div class="reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3 class="text-text-primary">
+          Full Stack Developer
+          <span class="text-text-muted font-normal">—</span>
+          
+          <a href="https://aptoide.com/" target="_blank" rel="noopener noreferrer" class="text-text-primary">
+            Aptoide
+          </a>
+          
+        </h3>
+        <span class="text-sm text-text-muted whitespace-nowrap">Aug 2019 – Nov 2021</span>
       </div>
+
+      <p class="text-xs text-text-muted mb-3">Lisbon, Portugal</p>
+
+      <ul class="space-y-1.5 text-sm text-text-secondary">
+        
+        <li class="leading-relaxed">Led AngularJS → React/Next.js migration for app store serving millions of users</li>
+        
+        <li class="leading-relaxed">Surpassed €100K in ad revenue through A/B testing and engagement optimization</li>
+        
+        <li class="leading-relaxed">Mentored 2 junior developers, built onboarding system reducing ramp-up time</li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2 class="section-heading reveal">Projects</h2>
+
+  <div class="space-y-6 stagger">
+    
+    <div class="card reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3>
+          
+          <a href="https://github.com/pedrogritter/ragforge" target="_blank" rel="noopener noreferrer">
+            RAGForge
+          </a>
+          
+        </h3>
+        <span class="text-xs text-text-muted font-mono">open-source</span>
+      </div>
+
+      <p class="text-sm text-text-secondary mb-3">Open-source developer template for building domain-specific AI chatbots with RAG. Hybrid vector search, multi-provider LLM support, 80+ tests.</p>
+
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Next.js 15</span>
+        
+        <span class="tag">pgvector</span>
+        
+        <span class="tag">Vercel AI SDK</span>
+        
+        <span class="tag">tRPC</span>
+        
+      </div>
+    </div>
+    
+    <div class="card reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3>
+          
+          <a href="https://www.faceit.com/" target="_blank" rel="noopener noreferrer">
+            FACEIT Landing Page
+          </a>
+          
+        </h3>
+        <span class="text-xs text-text-muted font-mono">professional</span>
+      </div>
+
+      <p class="text-sm text-text-secondary mb-3">Led the revamp of FACEIT's main landing page. Still live, serving millions of monthly users.</p>
+
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Next.js</span>
+        
+        <span class="tag">React</span>
+        
+        <span class="tag">TypeScript</span>
+        
+        <span class="tag">Redux</span>
+        
+      </div>
+    </div>
+    
+    <div class="card reveal">
+      <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+        <h3>
+          
+          <a href="https://github.com/pedrogritter" target="_blank" rel="noopener noreferrer">
+            AI GPT Agent
+          </a>
+          
+        </h3>
+        <span class="text-xs text-text-muted font-mono">side-project</span>
+      </div>
+
+      <p class="text-sm text-text-secondary mb-3">Agentic tool-calling application with OpenAI GPT-4, DALL-E image generation, and persistent conversation history.</p>
+
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Node.js</span>
+        
+        <span class="tag">OpenAI API</span>
+        
+        <span class="tag">TypeScript</span>
+        
+        <span class="tag">Zod</span>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h2 class="section-heading reveal">Skills</h2>
+
+  <div class="space-y-5 stagger">
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">Core</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">TypeScript</span>
+        
+        <span class="tag">React</span>
+        
+        <span class="tag">Next.js</span>
+        
+        <span class="tag">JavaScript</span>
+        
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">Styling</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Tailwind CSS</span>
+        
+        <span class="tag">Styled Components</span>
+        
+        <span class="tag">CSS Modules</span>
+        
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">State & Data</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Redux</span>
+        
+        <span class="tag">Zustand</span>
+        
+        <span class="tag">tRPC</span>
+        
+        <span class="tag">REST APIs</span>
+        
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">Backend</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Node.js</span>
+        
+        <span class="tag">Python</span>
+        
+        <span class="tag">PostgreSQL</span>
+        
+        <span class="tag">Drizzle ORM</span>
+        
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">AI & ML</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Vercel AI SDK</span>
+        
+        <span class="tag">OpenAI API</span>
+        
+        <span class="tag">Anthropic API</span>
+        
+        <span class="tag">pgvector</span>
+        
+        <span class="tag">RAG</span>
+        
+      </div>
+    </div>
+    
+    <div class="reveal">
+      <h3 class="text-sm text-text-muted mb-2">Tools</h3>
+      <div class="flex flex-wrap gap-2">
+        
+        <span class="tag">Git</span>
+        
+        <span class="tag">Docker</span>
+        
+        <span class="tag">CI/CD</span>
+        
+        <span class="tag">Linux</span>
+        
+        <span class="tag">Storybook</span>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-heading reveal">Education</h2>
+
+  <div class="space-y-4 stagger">
+    
+    <div class="reveal flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+      <div>
+        <h3 class="text-text-primary">BSc Computer Science</h3>
+        <p class="text-sm text-text-secondary">University of Lisbon — Faculty of Sciences</p>
+      </div>
+      <span class="text-sm text-text-muted whitespace-nowrap">2014 – 2021</span>
+    </div>
+    
+    <div class="reveal flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+      <div>
+        <h3 class="text-text-primary">Minor in Geographical Information</h3>
+        <p class="text-sm text-text-secondary">University of Lisbon — Faculty of Sciences</p>
+      </div>
+      <span class="text-sm text-text-muted whitespace-nowrap">2019 – 2020</span>
+    </div>
+    
+    <div class="reveal flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+      <div>
+        <h3 class="text-text-primary">Audiovisual & Multimedia</h3>
+        <p class="text-sm text-text-secondary">Restart Creative School</p>
+      </div>
+      <span class="text-sm text-text-muted whitespace-nowrap">2013 – 2014</span>
+    </div>
+    
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2 class="section-heading reveal">Contact</h2>
+
+  <div class="reveal">
+    <p class="text-text-secondary mb-6">
+      Open to opportunities in AI engineering, full-stack, or frontend roles with AI scope.
+      Based in Lisbon, working remotely.
+    </p>
+
+    <div class="flex flex-wrap gap-4 text-sm">
+      <a href="mailto:pedro12345g@gmail.com" class="text-accent hover:text-accent-muted transition-colors">
+        pedro12345g@gmail.com
+      </a>
+      <span class="text-surface-border">·</span>
+      <a href="https://linkedin.com/in/pedro-gritter/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-muted transition-colors">
+        LinkedIn
+      </a>
+      <span class="text-surface-border">·</span>
+      <a href="https://github.com/pedrogritter" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-accent-muted transition-colors">
+        GitHub
+      </a>
     </div>
   </div>
 </section>
 
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16">
-  <div
-    class="container mx-auto px-4 animate-on-scroll"
-    style="animation-delay: 1.5s"
-  >
-    <div class="max-w-2xl mx-auto">
-      <div class="text-center mb-12 animate-on-scroll">
-        <h2 class="text-3xl font-bold text-stone-200">Get In Touch</h2>
-        <p class="text-blue-500">Let's discuss your project</p>
-      </div>
+    </main>
 
-      <form class="space-y-6" action="/submit" method="POST">
-        <div class="group">
-          <input
-            type="text"
-            name="name"
-            required
-            class="w-full px-4 py-3 bg-slate-300 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 transition-all"
-            placeholder="Your Name"
-          />
-        </div>
-
-        <div class="group">
-          <input
-            type="email"
-            name="email"
-            required
-            class="w-full px-4 py-3 bg-slate-300 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 transition-all"
-            placeholder="Your Email"
-          />
-        </div>
-
-        <div class="group">
-          <textarea
-            name="message"
-            required
-            rows="5"
-            class="w-full px-4 py-3 bg-slate-300 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 transition-all"
-            placeholder="Your Message"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full px-6 py-3 rounded-lg text-zinc-300 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-gradient hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- class="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105" -->
-
-</div>
-</div>
-    </div>
-    <footer class="relative w-full mt-5 px-4 py-10 bg-default-50 text-white">
-  <div
-    class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 z-30"
-  >
-    <div class="flex flex-col gap-2">
-      <h3
-        class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+    <footer class="max-w-3xl mx-auto px-6 md:px-8 py-12 border-t border-surface-border relative z-10">
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm text-text-muted reveal">
+    <span>Pedro Gritter</span>
+    <div class="flex items-center gap-4">
+      
+      <a
+        href="https://github.com/pedrogritter"
+        class="hover:text-text-primary transition-colors duration-200"
+        style="text-decoration: none;"
+        target="_blank" rel="noopener noreferrer"
       >
-        Pedro Gritter
-      </h3>
-      <p class="text-default-600">
-        Full Stack Engineer specializing in modern web technologies
-      </p>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3
-        class="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+        GitHub
+      </a>
+      
+      <a
+        href="https://linkedin.com/in/pedro-gritter/"
+        class="hover:text-text-primary transition-colors duration-200"
+        style="text-decoration: none;"
+        target="_blank" rel="noopener noreferrer"
       >
-        Quick Links
-      </h3>
-      <nav class="flex flex-col gap-2">
-        <a href="https://github.com/pedrogritter"><b>Github</b></a>
-        <a href="https://www.linkedin.com/in/pedro-gritter/"><b>Linkedin</b></a>
-      </nav>
-    </div>
-    <div class="flex flex-col gap-2">
-      <h3
-        class="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 animate-text-gradient"
+        LinkedIn
+      </a>
+      
+      <a
+        href="mailto:pedro12345g@gmail.com"
+        class="hover:text-text-primary transition-colors duration-200"
+        style="text-decoration: none;"
+        
       >
-        Contact
-      </h3>
-      <div class="text-slate-50">
-        <p>Phone: (+351) 918460457</p>
-        <p>Email: pedro12345g@gmail.com</p>
-      </div>
+        Email
+      </a>
+      
     </div>
   </div>
 </footer>
 
-    <!-- include dark-mode-toggle.html  -->
-    <script src="/assets/js/cursor.js"></script>
-
-    <!-- Intersection Observer for animations -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("animate-fade-in");
-            }
-          });
-        });
-
-        document
-          .querySelectorAll(".animate-on-scroll")
-          .forEach((el) => observer.observe(el));
-      });
-    </script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>
