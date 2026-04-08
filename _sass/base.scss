@@ -1,10 +1,45 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+/* Motion Design Tokens */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-popover: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --scale-pressed: 0.97;
+  --scale-entry: 0.95;
+}
 
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(163, 163, 163, 0.4);
+  transition: text-decoration-color var(--duration-normal) var(--ease-out);
+
+  &:hover {
+    text-decoration-color: rgba(59, 130, 246, 0.8);
+  }
+}
+
+/* Focus-visible accent styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.7);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Hero heading subtle glow */
+.hero-glow {
+  text-shadow: 0 0 80px rgba(59, 130, 246, 0.15);
 }

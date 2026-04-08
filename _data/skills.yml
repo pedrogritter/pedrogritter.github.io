@@ -1,0 +1,17 @@
+- group: "Core"
+  items: ["TypeScript", "React", "Next.js", "JavaScript"]
+
+- group: "Styling"
+  items: ["Tailwind CSS", "Styled Components", "CSS Modules"]
+
+- group: "State & Data"
+  items: ["Redux", "Zustand", "tRPC", "REST APIs"]
+
+- group: "Backend"
+  items: ["Node.js", "Python", "PostgreSQL", "Drizzle ORM"]
+
+- group: "AI & ML"
+  items: ["Vercel AI SDK", "OpenAI API", "Anthropic API", "pgvector", "RAG"]
+
+- group: "Tools"
+  items: ["Git", "Docker", "CI/CD", "Linux", "Storybook"]

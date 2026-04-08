@@ -1,0 +1,17 @@
+- title: "RAGForge"
+  description: "Open-source developer template for building domain-specific AI chatbots with RAG. Hybrid vector search, multi-provider LLM support, 80+ tests."
+  tech: ["Next.js 15", "pgvector", "Vercel AI SDK", "tRPC"]
+  url: "https://github.com/pedrogritter/ragforge"
+  type: "open-source"
+
+- title: "FACEIT Landing Page"
+  description: "Led the revamp of FACEIT's main landing page. Still live, serving millions of monthly users."
+  tech: ["Next.js", "React", "TypeScript", "Redux"]
+  url: "https://www.faceit.com/"
+  type: "professional"
+
+- title: "AI GPT Agent"
+  description: "Agentic tool-calling application with OpenAI GPT-4, DALL-E image generation, and persistent conversation history."
+  tech: ["Node.js", "OpenAI API", "TypeScript", "Zod"]
+  url: "https://github.com/pedrogritter"
+  type: "side-project"

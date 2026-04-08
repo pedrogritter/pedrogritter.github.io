@@ -1,14 +1,14 @@
 url: "https://pedrogritter.github.io"
 baseurl: ""
-title: Pedro Gritter - Full Stack Developer
+title: "Pedro Gritter"
 email: pedro12345g@gmail.com
-description: Full Stack Developer specializing in modern web technologies
+description: "Front-end engineer building for the web since 2019. React, Next.js, TypeScript. Currently bridging frontend expertise with applied AI engineering."
 author: Pedro Gritter
 social:
   name: Pedro Gritter
   links:
     - https://github.com/pedrogritter
-    - https://linkedin.com/in/pedrogritter
+    - https://linkedin.com/in/pedro-gritter/
 
 # Build settings
 # theme: minima
