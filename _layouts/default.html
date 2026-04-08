@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,9 +18,51 @@
     <link href="/assets/css/animations.css" rel="stylesheet" />
   </head>
   <body class="bg-surface text-text-primary font-sans antialiased">
+    <!-- Marble ink background: SVG turbulence distorts gradient stripes into organic veins -->
+    <div id="ambient-bg" class="ambient-bg" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="0"
+        height="0"
+        aria-hidden="true"
+      >
+        <filter
+          id="marble-warp"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          color-interpolation-filters="sRGB"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.006 0.008"
+            numOctaves="3"
+            seed="5"
+            stitchTiles="stitch"
+            result="noise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="noise"
+            scale="260"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
+      <div class="marble-layer" style="filter: url(#marble-warp)">
+        <div class="marble-ink marble-ink-1"></div>
+        <div class="marble-ink marble-ink-2"></div>
+        <div class="marble-ink marble-ink-3"></div>
+      </div>
+    </div>
+    <!-- Frosted glass overlay -->
+    <div class="glass-overlay" aria-hidden="true"></div>
+
     {% include header.html %}
 
-    <main class="max-w-3xl mx-auto px-6 md:px-8">
+    <main class="max-w-3xl mx-auto px-6 md:px-8 relative z-10">
       {{ content }}
     </main>
 
