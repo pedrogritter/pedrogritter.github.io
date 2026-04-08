@@ -9,9 +9,3 @@
   tech: ["Next.js", "React", "TypeScript", "Redux"]
   url: "https://www.faceit.com/"
   type: "professional"
-
-- title: "AI GPT Agent"
-  description: "Agentic tool-calling application with OpenAI GPT-4, DALL-E image generation, and persistent conversation history."
-  tech: ["Node.js", "OpenAI API", "TypeScript", "Zod"]
-  url: "https://github.com/pedrogritter"
-  type: "side-project"
