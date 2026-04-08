@@ -1,42 +1,76 @@
 # Gritter Portfolio
 
-A modern, vaporwave-inspired portfolio website built with Jekyll and TailwindCSS.
+A dark, vaporwave-inspired personal portfolio built with Jekyll 4 and TailwindCSS 3.4. Features marble-ink SVG backgrounds, glassmorphism cards, scroll-driven parallax, and staggered reveal animations.
+
+**Live:** [pedrogritter.github.io](https://pedrogritter.github.io)
 
 ## 🚀 Features
 
-- Responsive design
-- Dynamic animated backgrounds
-- Interactive UI elements
-- Optimized performance
-- Modern glassmorphism effects
+- Marble-ink SVG background with fractal noise turbulence
+- Glassmorphism cards and frosted-glass overlays
+- Scroll-driven parallax (hero fade-out, section scale/opacity)
+- Staggered reveal animations with IntersectionObserver
+- Scroll progress indicator in the nav bar
+- Device orientation parallax on mobile
+- Respects `prefers-reduced-motion`
+- SEO optimized (jekyll-seo-tag, jekyll-sitemap)
+- HTML & CSS compression in production
 
 ## 🛠 Tech Stack
 
-- Jekyll
-- TailwindCSS
-- Alpine.js
-- HTML/CSS
-- JavaScript
+| Layer | Tools |
+|-------|-------|
+| **Static site** | Jekyll 4.2 |
+| **Styling** | TailwindCSS 3.4, PostCSS, Autoprefixer, CSSNano |
+| **Fonts** | Inter (sans), JetBrains Mono / Fira Code (mono) |
+| **Interactivity** | Vanilla JS (IntersectionObserver, scroll events) |
+| **Deployment** | GitHub Pages |
 
-## 🏗 Project Structure 
+## 🏗 Project Structure
 
-portfolio/
-├── includes/
-│ ├── sections/
-│ │ ├── hero.html
-│ │ ├── skills.html
-│ │ ├── experience.html
-│ │ └── education.html
-│ └── ...
-├── layouts/
-│ └── default.html
-├── assets/
-│ ├── css/
-│ └── js/
-├── config.yml
-└── index.html
+```
+pedrogritter.github.io/
+├── _config.yml
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+├── Gemfile
+├── _data/
+│   ├── experience.yml
+│   ├── projects.yml
+│   ├── skills.yml
+│   ├── education.yml
+│   └── social.yml
+├── _includes/
+│   ├── header.html
+│   ├── footer.html
+│   └── sections/
+│       ├── hero.html
+│       ├── experience.html
+│       ├── projects.html
+│       ├── skills.html
+│       ├── education.html
+│       └── contact.html
+├── _layouts/
+│   └── default.html
+├── _sass/
+│   └── base.scss
+└── assets/
+    ├── css/
+    │   ├── main.scss
+    │   └── animations.scss
+    └── js/
+        └── main.js
+```
 
 ## 🚦 Getting Started
+
+### Prerequisites
+
+- Ruby >= 2.7
+- Node.js >= 14
+- Bundler (`gem install bundler`)
 
 ### Install dependencies
 
@@ -48,66 +82,61 @@ npm install
 ### Run development server
 
 ```bash
-bundle exec jekyll build
+bundle exec jekyll serve
+```
+
+### Build for production
+
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
 ```
 
 ## 💅 Customization
 
-### Colors
+### Design Tokens
 
-The site uses a vaporwave-inspired color palette that can be customized in the Tailwind config:
+Color scheme is configured in `tailwind.config.js`:
 
-- Primary: Blue to Purple gradients
-- Secondary: Purple to Pink gradients
-- Accent: Cyan to Emerald gradients
+| Token | Value | Purpose |
+|-------|-------|---------|
+| `accent` | `#3b82f6` | Links, focus rings, highlights |
+| `accent-muted` | `#93c5fd` | Hover states |
+| `surface-base` | `#0a0a0a` | Page background |
+| `surface-raised` | `#141414` | Cards, elevated elements |
+| `surface-border` | `#262626` | Borders |
+| `text-primary` | `#fafafa` | Headings, body |
+| `text-secondary` | `#a3a3a3` | Descriptions |
+| `text-muted` | `#737373` | Captions, dates |
+
+Easing curves and animation durations are defined as CSS custom properties in `_sass/base.scss`.
 
 ### Animations
 
-Custom animations are defined in the global styles:
+Defined in `assets/css/animations.scss`:
 
-- Text gradients
-- Floating elements
-- Grid movements
-- Pulse effects
+- **Reveal**: Fade-in + 12px translateY with staggered delays (0–840ms)
+- **Marble drift**: Three gradient layers with turbulence distortion (35s, 45s, 55s cycles)
+- **Scroll hint**: Bouncing dot indicator on the hero
+- **Progress bar**: Scroll-driven nav progress indicator
+- **Hero parallax**: Opacity, translateY, and scale on scroll
 
-## 📱 Responsive Design
+### Data-Driven Sections
 
-The site is fully responsive with breakpoints at:
+All content lives in `_data/` YAML files — edit those to update sections without touching templates:
 
-- sm: 640px
-- md: 768px
-- lg: 1024px
-- xl: 1280px
-- 2xl: 1536px
-
-## 🔧 Development
-
-### Prerequisites
-
-- Ruby >= 2.7.0
-- Node.js >= 14.0.0
-- Jekyll >= 4.0.0
-
-### Local Development
-
-1. Clone the repository
-2. Install dependencies
-3. Run development server
-4. Make changes
-5. Build for production
+- `experience.yml` — Work history (title, company, highlights)
+- `projects.yml` — Featured projects (title, link, tech tags)
+- `skills.yml` — Grouped skill tags (Core, Styling, State & Data, Backend, AI & ML, Tools)
+- `education.yml` — Degrees and institutions
+- `social.yml` — Social links for header/footer
 
 ## 📄 License
 
-MIT License - feel free to use this template for your own portfolio!
+MIT License — feel free to use this template for your own portfolio.
 
 ## 👤 Author
 
 Pedro Gritter
 
 - GitHub: [@pedrogritter](https://github.com/pedrogritter)
-- LinkedIn: [My LinkedIn](https://linkedin.com/in/pedrogritter)
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern UI/UX trends in 2024
-- Vaporwave aesthetic influence
+- LinkedIn: [pedrogritter](https://linkedin.com/in/pedrogritter)
